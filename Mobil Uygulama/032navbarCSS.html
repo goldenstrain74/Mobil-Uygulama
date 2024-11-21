@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar yapımı</title>
+    
+    <style> 
+    .navigationBar{
+        background: linear-gradient(rgb(58, 58, 136),rgb(33, 33, 255),rgb(124, 174, 248));
+        position: fixed;
+        top: 0px;
+        overflow: hidden;
+        width: 80%;
+        margin-left: 10%;
+        margin-right:10%;
+    }
+    .navigationBar a{
+        
+        text-decoration: none;
+        text-align: center;
+        font-size: bold;
+        display: block;
+        float: left;
+        color: #fff ;
+        width: 25%;
+        height: 30px;
+    }
+
+    .navigationBar a:hover {
+        background: linear-gradient(yellow,orange,tomato,red);
+    cursor: grab ;
+    color: black;
+    }
+    </style>
+
+</head>
+<body>
+    <nav class="navigationBar">
+        <a href="">link 1</a>
+        <a href="">link 2</a>
+        <a href="">link 3</a>
+        <a href="">link 4</a>
+    </nav>
+</body>
+</html>

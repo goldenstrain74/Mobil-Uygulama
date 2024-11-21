@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Ürün Kart</title>
+
+<style>
+    #container{
+        background-color: whitesmoke;
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+        padding:5%  ;
+        padding-top: 0px;
+
+        
+    }   
+    #bannerimg{
+        width: 100%;
+    }
+    #banner{
+        width: 90%;
+        height: max-content;
+    }   
+
+    #Kart{ 
+        display: block;
+
+        float: left;
+        margin: 20px 17px 0px 17px;
+        border-radius: 2%;
+        padding: 1%;
+        background-color: rgb(223, 223, 223);
+        width: 180px;
+        height: 290px;
+    }
+    #bilgi{
+        display: block;
+        margin-top: 10px;
+        font-size: 12px;
+        overflow: hidden;
+    }   
+
+
+    .laptop{
+        border-radius: 5px;
+        float: left;
+        width: 98%;
+        
+    }
+    #fiyat{
+        width: 100%;
+        padding-left: 29%;
+        text-align: center;
+    }
+  
+</style>    
+
+</head>
+<body onload="slayt1_1() ;slayt1_2(); " style="background-color: whitesmoke" >
+
+   
+  
+<div id="container">
+   
+    
+    <div id="banner">
+        <img src="Images/bannerHepsibuarda.PNG" id="bannerimg" alt="">  
+    </div>
+
+    <script>
+
+        function slayt1_1(){
+            const resimler1_1=
+           [
+            
+            "Images/laptop2.PNG",
+            "Images/laptop3.PNG",
+            "Images/laptop4.PNG",
+            "Images/laptop5.PNG",
+            "Images/laptop1.PNG"
+           ]
+         var siraNo=0;
+
+       setInterval(()=>{
+        document.getElementById("laptop1_1").src=resimler1_1[siraNo];
+        siraNo=(siraNo+1)% resimler1_1.length;
+              
+       },1500);
+        }
+
+        function slayt1_2(){
+            const resimler1_2=
+           [
+           "Images/2.laptop2.png",
+           "Images/2.laptop3.png",
+           "Images/2.laptop4.png",
+           "Images/2.laptop5.png",
+           "Images/2.laptop1.png"
+           ]
+         var siraNo=0;
+
+       setInterval(()=>{
+        document.getElementById("laptop1_2").src=resimler1_2[siraNo];
+        siraNo=(siraNo+1)% resimler1_2.length;
+              
+       },1500);
+        }
+         
+   </script>
+
+    <div id="Kart">
+        <div id="Image"   >
+              <img src="Images/laptop1.PNG" id="laptop1_1" class="laptop"  alt="laptop">
+        </div>  <br> <br> <br> <br> <br> <br> <br>
+            <span id="bilgi">
+                <p>Lenovo Thinkpad,Intel i5 12. nesil CPU, 1TB SSD, ddr5 ...</p>
+            </span>
+
+            <div>
+                 <img src="Images/yıldız.PNG" alt="">    
+            </div>
+            <br>
+            <span id="fiyat">
+                <strong>99.999</strong>
+            </span>
+    </div>
+
+    <div id="Kart">
+        <div id="Image"   >
+              <img src="Images/2.laptop1.png" id="laptop1_2" class="laptop" alt="laptop">
+        </div>  <br> <br> <br> <br> <br> <br> <br>
+            <span id="bilgi">
+                <p>DELL ,AMD ryzen5 CPU, 512GB SSD, ddr4 ...</p>
+            </span>
+
+            <div>
+                 <img src="Images/yıldız.PNG" alt="">    
+            </div>
+            <br>
+            <span id="fiyat">
+                <strong>58.799</strong>
+            </span>
+    </div>
+
+
+    <div id="Kart">
+        <div id="Image"   >
+              <img src="Images/laptop1.PNG" id="laptop1_1" class="laptop"  alt="laptop">
+        </div>  <br> <br> <br> <br> <br> <br> <br>
+            <span id="bilgi">
+                <p>Lenovo Thinkpad,Intel i5 12. nesil CPU, 1TB SSD, ddr5 ...</p>
+            </span>
+
+            <div>
+                 <img src="Images/yıldız.PNG" alt="">    
+            </div>
+            <br>
+            <span id="fiyat">
+                <strong>99.999</strong>
+            </span>
+    </div>
+
+
+
+    <div id="Kart">
+        <div id="Image"   >
+              <img src="Images/2.laptop1.png" id="laptop1_2" class="laptop" alt="laptop">
+        </div>  <br> <br> <br> <br> <br> <br> <br>
+            <span id="bilgi">
+                <p>DELL ,AMD ryzen5 CPU, 512GB SSD, ddr4 ...</p>
+            </span>
+
+            <div>
+                 <img src="Images/yıldız.PNG" alt="">    
+            </div>
+            <br>
+            <span id="fiyat">
+                <strong>58.799</strong>
+            </span>
+    </div>
+
+    <div id="Kart">
+        <div id="Image"   >
+              <img src="Images/laptop1.PNG" id="laptop1_1" class="laptop"  alt="laptop">
+        </div>  <br> <br> <br> <br> <br> <br> <br>
+            <span id="bilgi">
+                <p>Lenovo Thinkpad,Intel i5 12. nesil CPU, 1TB SSD, ddr5 ...</p>
+            </span>
+
+            <div>
+                 <img src="Images/yıldız.PNG" alt="">    
+            </div>
+            <br>
+            <span id="fiyat">
+                <strong>99.999</strong>
+            </span>
+    </div>
+
+
+</div>
+
+
+
+
+
+    
+
+
+
+
+</body>
+</html>
