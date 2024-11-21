@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asal Sayı bulma</title>
+</head>
+
+<style>
+
+/*table tr{padding: 3px;}*/
+table td {padding: 3px;}
+</style>
+
+
+<body>
+
+<script>
+    function yazdir(){
+        document.getElementById('txtarea').innerHTML=' '
+
+       var ilkDeger, sonDeger;
+       ilkDeger=parseFloat(document.getElementById('degerilk').value);
+       sonDeger=parseFloat(document.getElementById('degerson').value);
+       for(i=ilkDeger;i<=sonDeger;i++)
+       {
+        let flag = 0;
+
+
+       for (let j = 2; j < i; j++) {
+            if (i % j == 0)
+        {
+            flag = 1;
+            break;
+        }
+}
+
+
+if (i > 1 && flag == 0) {
+    document.getElementById('txtarea').innerHTML+=i+", "
+}
+    
+    }
+    }
+</script>
+
+<h1 style="text-align: center;"> Asal Sayı Bulma</h1> <br>
+<br>
+
+<table align="center" style="text-align: center; padding:3px ;" border="2px">
+    <tr>
+        <td colspan="2"><h2>Aralık girin</h2></td>
+        
+    </tr>
+    <tr>
+        <td>
+            başlangıç değeri
+        </td>
+        <td>
+            <input id="degerilk" type="number"> 
+        </td>
+    </tr>
+    <tr>
+        <td>
+            bitiş değeri 
+        </td>
+        <td>
+            <input id="degerson" type="number">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2"><button onclick="yazdir()">yazdır</button></td>
+    </tr>
+    <tr>
+        <td colspan="2">  <textarea name="txtarea" id="txtarea" cols="30" rows="10"></textarea></td>
+    </tr>
+</table>
+
+     
+   
+ 
+     <br>
+  
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelimeler</title>
+    <style>
+        #kelimeler {
+            background-color: navy;
+            color: bisque;
+            width: max-content;
+            height: 200px;
+            margin-left: 35%;
+            margin-right: 35%;
+            margin-top: 100px;
+            text-align: center;
+            font-size: 70px;
+            padding:40px;
+        }
+    </style>
+</head>
+<body>
+    <div  id="kelimeler"></div>
+    <script>
+
+        const words =["Teacher=Öğretmen", 
+                    "Driver=Sürücü", 
+                    "Swimmer=Yüzücü", 
+                    "Cooker=Aşçı",
+                    "Clerk=Tezgahtar", 
+                    "Officer=Memur", 
+                    ];
+
+                   
+        var index=0;
+        setInterval(() => {
+            document.getElementById("kelimeler").textContent = words[index];
+            index = (index+1) % words.length;
+        }, 2000); // 1000 ms = 1 s
+
+    </script>
+</body>
+</html>
