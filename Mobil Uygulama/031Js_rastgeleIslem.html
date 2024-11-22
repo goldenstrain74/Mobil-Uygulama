@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>matematik Oyunu</title>
+</head>
+
+<style>
+td {padding: 3px; color: maroon;   border-bottom: 1px solid #ddd; }
+/*#rs1{width: 100px;}
+#op{width: 50px;}
+#rs2{width: 100px;}*/
+#tahmin{width: 150px;}
+table{
+    width: 260px;
+    padding: 5px;
+    background-color: whitesmoke;
+    text-align: center; 
+    table-layout: fixed;
+    
+
+}
+
+</style>
+
+<body onload="rastgelesayı1() ;rastgelesayı2(); rastgeleislem();">
+
+<script>
+    function kontrolet () {
+        var s1 , s2 , cevap, tahmin;
+        cevap=0;
+        tahmin= parseFloat(document.getElementById('tahmin').value);
+        s1 = parseFloat(document.getElementById('randoms1').innerHTML);
+        s2 = parseFloat(document.getElementById('randoms2').innerHTML);
+
+        //sayıları okuyor mu diye kontrol ettiğimiz yer
+        //alert("sayı1:"+s1+"  sayı2:"+s2);
+
+        if(document.getElementById('islem').textContent=='+'){
+            cevap = s1+s2;
+            //alert('+ işlem');
+            
+        }
+
+         if(document.getElementById('islem').textContent=="-"){
+            cevap = s1-s2;
+            //alert('- işlem');
+            
+        }
+         if(document.getElementById('islem').textContent=="x"){
+            cevap = s1*s2;
+            //alert('* işlem');
+            
+         }
+         if(document.getElementById('islem').textContent=="/"){
+            cevap = s1/s2;
+            //alert('/ işlem');
+            
+        }
+        //alert("işlem="+document.getElementById('islem').innerHTML);
+        alert("tahmin=" +tahmin);
+        alert("cevap="+cevap);
+
+        if(cevap==tahmin){
+            alert("doğu tahmin");
+        }
+        else {
+            alert("yanlış tahmin");
+        }
+      document.getElementById('tahmin').innerHTML=' ';
+        rastgelesayı1();
+        rastgelesayı2();
+        rastgeleislem();
+    }
+    function rastgelesayı1 () {
+        s1=Math.floor(Math.random(1)*20+1);
+        document.getElementById('randoms1').innerHTML=s1;
+    }
+    function rastgelesayı2 () {
+        s2=Math.floor(Math.random(1)*10+1);
+        document.getElementById('randoms2').innerHTML=s2;
+    }
+    function rastgeleislem () {
+        const islemler= ['+','-','/','x']
+        rnd=Math.ceil(Math.random(1)*4-1);
+        document.getElementById('islem').innerHTML=islemler[rnd];
+    }
+ addEventListener("keypress", function(event){
+    if(event.keyCode==13) {kontrolet();}
+ });
+    
+</script>
+
+    <table align="center"  >
+        <tr>
+            <td >sayı 1</td>
+            <td>Operatör</td>
+            <td>sayı 2</td>
+        </tr>
+        <tr >
+            <td id="rs1" bgcolor="lime"> <div id="randoms1"></div></td>
+            <td id="op" bgcolor="lightskyblue"><div id="islem"></div></td>
+            <td id="rs2" bgcolor="lime"><div id="randoms2"></div></td>
+            <!--             <td bgcolor="lime" >    <div id="randoms1"></div>     </td>
+            <td bgcolor="lightskyblue" style="width: 35px;">    <div id="islem"></div></td>
+            <td bgcolor="lime" ><div id="randoms2"></div></td>  -->
+            
+        </tr>
+        <tr>
+            <td>tahmin:</td>
+            <td colspan="2"><input id="tahmin" type="number"></td>
+        </tr>
+        <tr>
+            <td colspan="3"><button onclick="kontrolet()">kontrol et</button>   </td>
+        </tr>
+    </table>
+</body>
+</html>
