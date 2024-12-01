@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aralık toplama</title>
+
+<style>
+
+table {text-align: center;}
+
+</style>
+
+<script>
+    function hesapla(){
+
+        document.getElementById('sonuc').innerHTML='';
+
+        var i, s1, s2 ;
+
+        s1=parseInt (document.getElementById('ilkdeger').value);
+        s2=parseInt( document.getElementById('sondeger').value);
+       // alert(s1);
+        //alert(s2);
+        let sonuc=0;
+        for(i=s1 ; i<=s2 ; i++){
+            
+          sonuc+=i;
+        }
+        alert(sonuc);
+       // document.getElementById('sonuc').innerHTML=sonuc;
+    }
+</script>
+
+
+</head>
+<body>
+    <table border="1px">
+        <tr>
+            <th>Başlangıç değeri</th>
+            <th>Bitiş değeri</th>
+        </tr>
+        
+        <tr>
+            <td><input type="number" name="ilkdeger" id="ilkdeger"></td>
+            <td><input type="number" name="sondeger" id="sondeger"></td>
+            
+        </tr>
+
+        <tr>
+            <td colspan="2"> <button onclick="hesapla()">Hesapla</button> </td>     
+        </tr>
+
+        <tr>
+            <td colspan="2"> <div id="sonuc"></div> </td>
+        </tr>
+    </table>
+</body>
+</html>
