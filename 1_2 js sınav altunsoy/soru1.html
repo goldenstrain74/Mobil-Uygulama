@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soru1</title>
+
+    <script>
+        let dizi = [10, 22, 35, 45, 12, 39, 31];
+        
+        let tek = [];
+        let cift = [];
+        
+        for (let i = 0; i < dizi.length; i++) {
+            if (dizi[i] % 2 === 0) {
+                cift.push(dizi[i]);
+            } else {
+                tek.push(dizi[i]);
+            }
+        }
+
+        console.log( cift);
+        console.log( tek);
+
+        let ciftTop = 0;
+        for (let i = 0; i < cift.length; i++) {
+            ciftTop += cift[i];
+        }
+        let ciftOrt = ciftTop / cift.length;
+
+        let tekTop = 0;
+        for (let i = 0; i < tek.length; i++) {
+            tekTop += tek[i];
+        }
+        let tekOrt = tekTop / tek.length;
+
+        console.log("ortalama cift:", ciftOrt);
+        console.log("ortalama tek:", tekOrt);
+
+        if(ciftOrt>tekOrt){
+            console.log("büyük olan:"+ciftOrt+" çift sayıların ortalaması")
+
+        }
+        else(console.log("büyük olan:"+tekOrt+" tek sayıların ortalaması"))
+    </script>
+
+</head>
+<body>
+</body>
+</html>

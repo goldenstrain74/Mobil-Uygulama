@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>soru2</title>
+</head>
+<body>
+
+    <div class="container ">
+        <div class="row">
+            <h3>NÜFUS HESAPLAMA</h3>
+        </div>
+
+        <div class="row p-3">
+            <div class="col-md-5 p-1">Başlangıç Nüfusu</div>
+            <div class="col-md-7 p-1"><input type="number" name="ilk" id="ilk"></div>
+        </div>
+
+        <div class="row p-3">
+            <div class="col-md-5 p-1">Büyüme Oranı</div>
+            <div class="col-md-7 p-1"><input type="number" name="oran" id="oran"></div>
+        </div>
+
+        <div class="row p-3">
+            <div class="col-md-5 p-1">Yıl</div>
+            <div class="col-md-7 p-1"><input type="number" name="yil" id="yil"></div>
+        </div>
+
+        <div><button onclick="hesapla()">Hesapla</button></div>
+
+        <div class="row">
+            <div id="son"></div>
+        </div>
+
+    </div>
+
+    <script>
+        function hesapla() {
+            var bas = parseFloat(document.getElementById('ilk').value);
+            var oran = parseFloat(document.getElementById('oran').value);
+            var yil = parseInt(document.getElementById('yil').value);
+
+           
+
+            var sonuc = bas;
+            var artis = (bas / 100) * oran;
+
+            for (var i = 1; i <= yil; i++) {
+                sonuc += artis;
+            }
+
+            
+
+            document.getElementById('son').innerHTML = "Hesaplanan Nüfus: " + sonuc;
+        }
+    </script>
+
+</body>
+</html>
