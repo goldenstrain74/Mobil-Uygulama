@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow function</title>
+</head>
+
+<script>
+    //Normal fontsiyon tanımı
+
+    function topla1(a,b){
+        return(a+b);
+    }
+
+    //Klasik kullanım
+
+    let topla2 = (a,b) => a+b;
+
+    //arrow fonksiyonu tanımlama yol-1
+
+    topla3=function (a,b){
+        return (a+b);
+    }
+
+    //arrow tanımlama yol-2
+
+    topla4 = (a,b)=>{
+        return (a+b);
+    }
+
+      //Normal fontsiyon tanımı
+
+      function cikar1(a,b){
+        return(a-b);
+    }
+
+    // Klasik Kullanım
+    let cikar2 = (a,b) => a-b;
+
+    //arrow fonksiyonu tanımlama yol-1
+
+    cikar3=function (a,b){
+        return (a-b);
+    }
+
+    //arrow tanımlama yol-2
+
+    cikar4 = (a,b)=>{
+        return (a-b);
+    }
+
+      //Normal fontsiyon tanımı
+
+      function carp1(a,b){
+        return(a*b);
+    }
+
+    //Klasik kullanım
+    let carp2 = (a,b) => a*b;
+
+    //arrow fonksiyonu tanımlama yol-1
+
+    carp3=function (a,b){
+        return (a*b);
+    }
+
+    //arrow tanımlama yol-2
+
+    carp4 = (a,b)=>{
+        return (a*b);
+    }
+        //Normal fontsiyon tanımı
+
+        function bol1(a,b){
+        return(a/b);
+    }
+
+    //Klasik kullanım
+
+    let bol2 = (a,b) => a/b;
+
+    //arrow fonksiyonu tanımlama yol-1
+
+    bol3=function (a,b){
+        return (a/b);
+    }
+
+    //arrow tanımlama yol-2
+
+    bol4 = (a,b)=>{
+        return (a/b);
+    }
+
+    message= () =>{
+        alert("merhaba")
+    }
+
+
+
+    function islem(){
+        let s1, s2, sonuctop,sonuccarp,sonuccik,sonucbol;
+        s1=parseFloat(document.getElementById('say1').value); 
+        s2=parseFloat(document.getElementById('say2').value); 
+        sonuctop=topla1(s1,s2);
+        sonuccik=cikar1(s1,s2);
+        sonuccarp=carp1(s1,s2);
+        sonucbol=bol1(s1,s2);
+        document.getElementById('sonuc+').innerHTML=sonuctop;
+        document.getElementById('sonuc-').innerHTML=sonuccik;
+        document.getElementById('sonuc*').innerHTML=sonuccarp;
+        document.getElementById('sonuc/').innerHTML=sonucbol;
+    }
+
+</script>
+
+<body onload="message()">
+    s1= <input type="number" id="say1" > <br>
+    s2= <input type="number" id="say2" > <br>
+    <button onclick="islem()">topla</button> <br>
+    sonuc = <br> 
+    
+    <span id="sonuc+"></span> <br>
+     <span id="sonuc-"></span> <br>
+      <span id="sonuc*"></span> <br>
+      <span id="sonuc/"></span>
+</body>
+</html>
